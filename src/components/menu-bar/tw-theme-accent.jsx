@@ -15,18 +15,18 @@ import styles from './settings-menu.css';
 
 const options = defineMessages({
     [ACCENT_RED]: {
-        defaultMessage: 'Red',
-        description: 'Name of the red color scheme, used by TurboWarp by default.',
+        defaultMessage: 'Green',
+        description: 'Name of the green color scheme, used by AcidMod by default.',
         id: 'tw.accent.red'
     },
     [ACCENT_PURPLE]: {
-        defaultMessage: 'Purple',
-        description: 'Name of the purple color scheme. Matches modern Scratch.',
+        defaultMessage: 'Amethyst',
+        description: 'Name of the Amethyst color scheme. Matches modern Scratch.',
         id: 'tw.accent.purple'
     },
     [ACCENT_BLUE]: {
-        defaultMessage: 'Blue',
-        description: 'Name of the blue color scheme. Matches Scratch before the high contrast update.',
+        defaultMessage: 'Aqua',
+        description: 'Name of the aqua color scheme. Matches Scratch before the high contrast update.',
         id: 'tw.accent.blue'
     }
 });
