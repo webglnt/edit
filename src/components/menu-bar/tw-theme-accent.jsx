@@ -81,7 +81,7 @@ const AccentThemeMenu = ({
             <ColorIcon id={theme.accent} />
             <span className={styles.submenuLabel}>
                 <FormattedMessage
-                    defaultMessage="Accent"
+                    defaultMessage="Themes"
                     description="Label for menu to choose accent color (eg. TurboWarp's red, Scratch's purple)"
                     id="tw.menuBar.accent"
                 />
