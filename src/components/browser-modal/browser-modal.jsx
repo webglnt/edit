@@ -72,7 +72,7 @@ const BrowserModal = ({ intl, ...props }) => {
                         <React.Fragment>
                             <p>
                                 <FormattedMessage
-                                    defaultMessage="Your browser {webGlLink} which is needed for this site to run. Try updating your browser and graphics drivers or restarting your computer."
+                                    defaultMessage="Your browser {webGlLink} which is usually needed for Scratch to run. But WebGLn't is designed to run without it!"
                                     description="WebGL missing message. {webGLLink} is a link with the text 'does not support WebGL' from Scratch's translations"
                                     id="tw.webglModal.description"
                                     values={{
@@ -88,37 +88,12 @@ const BrowserModal = ({ intl, ...props }) => {
                                     }}
                                 />
                             </p>
-                            <p>
-                                <FormattedMessage
-                                    defaultMessage="Make sure you're using a recent version of Google Chrome, Mozilla Firefox, Microsoft Edge, or Apple Safari."
-                                    description="A message that appears in the browser not supported modal"
-                                    id="tw.browserModal.desc"
-                                />
-                            </p>
-                            <p>
-                                <FormattedMessage
-                                    defaultMessage="On Apple devices, you must disable {lockdownMode}."
-                                    description="Part of the browser not supported message. Lockdown Mode refers to https://support.apple.com/en-us/HT212650"
-                                    id="tw.lockdownMode"
-                                    values={{
-                                        lockdownMode: (
-                                            <a href="https://support.apple.com/en-us/HT212650">
-                                                <FormattedMessage
-                                                    defaultMessage="Lockdown Mode"
-                                                    description="Links to an Apple support page about Lockdown Mode: https://support.apple.com/en-us/HT212650 Try to translate this the same as Apple."
-                                                    id="tw.lockdownMode2"
-                                                />
-                                            </a>
-                                        )
-                                    }}
-                                />
-                            </p>
                         </React.Fragment>
                     )}
 
                     {/* Add Close Button */}
                     <button onClick={handleClose} className={styles.closeButton}>
-                        Close
+                        Dismiss
                     </button>
                 </Box>
             </div>
