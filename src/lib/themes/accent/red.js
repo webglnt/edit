@@ -1,4 +1,5 @@
 const guiColors = {
+    'glosstex': 'url(./glossAcid.png)',
     'motion-primary': '#228B22',
     'motion-primary-transparent': '#228B22e6',
     'motion-tertiary': '#228B22',
