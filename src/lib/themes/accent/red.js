@@ -1,11 +1,11 @@
 const guiColors = {
-    'motion-primary': '#ff4c4c',
-    'motion-primary-transparent': '#ff4c4ce6',
-    'motion-tertiary': '#cc3333',
+    'motion-primary': '#A1F768',
+    'motion-primary-transparent': '#A1F768e6',
+    'motion-tertiary': '#AFE1AF',
 
-    'looks-secondary': '#ff4c4c',
-    'looks-transparent': '#ff4d4d59',
-    'looks-light-transparent': '#ff4d4d26',
+    'looks-secondary': '#A1F768',
+    'looks-transparent': '#AFE1AF59',
+    'looks-light-transparent': '#AFE1AF26',
     'looks-secondary-dark': 'hsla(0, 42%, 51%, 1)',
 
     'extensions-primary': 'hsla(10, 85%, 65%, 1)',
