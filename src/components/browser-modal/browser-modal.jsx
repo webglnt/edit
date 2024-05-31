@@ -26,76 +26,79 @@ const BrowserModal = ({ intl, ...props }) => {
     };
 
     return (
-        <ReactModal
-            isOpen={isOpen}
-            className={styles.modalContent}
-            contentLabel={intl.formatMessage({ ...messages.label })}
-            overlayClassName={styles.modalOverlay}
-            onRequestClose={handleClose} // Set onRequestClose to handleClose
-        >
-            <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
-                {/* Header section with close button */}
-                <div className={styles.header}>
-                    <CloseButton onClick={handleClose} className={styles.closeButton} />
-                    <h2>
-                        <FormattedMessage {...label} />
-                    </h2>
-                </div>
-
-                <Box className={styles.body}>
-                    <Box className={styles.illustration}>
-                        <img
-                            src={unhappyBrowser}
-                            draggable={false}
-                        />
-                    </Box>
-
-                    <Box className={styles.content}>
-                        {/* Main content goes here */}
-                        {/* eslint-disable max-len */}
-                        {isNewFunctionSupported() ? null : (
-                            // This message should only be seen by website operators, so we don't need to translate it
-                            <p>
-                                {'Unable to compile JavaScript with new Function(). This is most likely caused by an overly-strict Content-Security-Policy. The CSP must include \'unsafe-eval\'.'}
-                            </p>
-                        )}
-
-                        {incompatibleUserscripts.length > 0 && (
-                            <React.Fragment>
-                                {incompatibleUserscripts.map((message, index) => (
-                                    <p key={index}>
-                                        {message}
-                                    </p>
-                                ))}
-                            </React.Fragment>
-                        )}
-
-                        {!isRendererSupported() && (
-                            <React.Fragment>
-                                <p>
-                                    <FormattedMessage
-                                        defaultMessage="Your browser {webGlLink} which is usually needed for Scratch to run. But WebGLn't is designed to run without it!"
-                                        description="WebGL missing message. {webGLLink} is a link with the text 'does not support WebGL' from Scratch's translations"
-                                        id="tw.webglModal.description"
-                                        values={{
-                                            webGlLink: (
-                                                <a href="https://get.webgl.org/">
-                                                    <FormattedMessage
-                                                        defaultMessage="does not support WebGL"
-                                                        description="link part of your browser does not support WebGL message"
-                                                        id="gui.webglModal.webgllink"
-                                                    />
-                                                </a>
-                                            )
-                                        }}
-                                    />
-                                </p>
-                            </React.Fragment>
-                        )}
-                    </Box>
-                </Box>
-            </Box>
-        </ReactModal>
+    <Modal
+        className={styles.modalContent}
+        onRequestClose={props.onClose}
+        contentLabel={props.intl.formatMessage(messages.title)}
+        id="settingsModal"
+    >
+        <Box className={styles.body}>
+            <Header>
+                <FormattedMessage
+                    defaultMessage="Featured"
+                    description="Settings modal section"
+                    id="tw.settingsModal.featured"
+                />
+            </Header>
+            <CustomFPS
+                framerate={props.framerate}
+                onChange={props.onFramerateChange}
+                onCustomizeFramerate={props.onCustomizeFramerate}
+            />
+            <Interpolation
+                value={props.interpolation}
+                onChange={props.onInterpolationChange}
+            />
+            <HighQualityPen
+                value={props.highQualityPen}
+                onChange={props.onHighQualityPenChange}
+            />
+            <WarpTimer
+                value={props.warpTimer}
+                onChange={props.onWarpTimerChange}
+            />
+            <Header>
+                <FormattedMessage
+                    defaultMessage="Remove Limits"
+                    description="Settings modal section"
+                    id="tw.settingsModal.removeLimits"
+                />
+            </Header>
+            <InfiniteClones
+                value={props.infiniteClones}
+                onChange={props.onInfiniteClonesChange}
+            />
+            <RemoveFencing
+                value={props.removeFencing}
+                onChange={props.onRemoveFencingChange}
+            />
+            <RemoveMiscLimits
+                value={props.removeLimits}
+                onChange={props.onRemoveLimitsChange}
+            />
+            <Header>
+                <FormattedMessage
+                    defaultMessage="Danger Zone"
+                    description="Settings modal section"
+                    id="tw.settingsModal.dangerZone"
+                />
+            </Header>
+            {!props.isEmbedded && (
+                <CustomStageSize
+                    {...props}
+                />
+            )}
+            <DisableCompiler
+                value={props.disableCompiler}
+                onChange={props.onDisableCompilerChange}
+            />
+            {!props.isEmbedded && (
+                <StoreProjectOptions
+                    {...props}
+                />
+            )}
+        </Box>
+    </Modal>
     );
 };
 
