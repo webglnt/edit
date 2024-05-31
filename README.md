@@ -1,4 +1,4 @@
-scratch-gui modified for use in [TurboWarp](https://turbowarp.org/)
+scratch-gui modified for use in [AcidMod](https://acidmod.github.io/)
 
 ## Setup
 
