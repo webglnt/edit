@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import Box from '../box/box.jsx';
-import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-intl';
+import { defineMessages, injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import {
     isRendererSupported,
     isNewFunctionSupported,
@@ -20,20 +20,24 @@ const messages = defineMessages({
     }
 });
 
-const noop = () => {};
-
-const BrowserModal = ({intl, ...props}) => {
+const BrowserModal = ({ intl, ...props }) => {
+    const [isOpen, setIsOpen] = useState(true); // State to manage modal open/close
     const label = messages.label;
     const incompatibleUserscripts = findIncompatibleUserscripts();
+
+    const handleClose = () => {
+        setIsOpen(false); // Function to close the modal
+    };
+
     return (
         <ReactModal
-            isOpen
+            isOpen={isOpen}
             className={styles.modalContent}
-            contentLabel={intl.formatMessage({...messages.label})}
+            contentLabel={intl.formatMessage({ ...messages.label })}
             overlayClassName={styles.modalOverlay}
-            onRequestClose={noop}
+            onRequestClose={handleClose} // Set onRequestClose to handleClose
         >
-            <div dir={props.isRtl ? 'rtl' : 'ltr'} >
+            <div dir={props.isRtl ? 'rtl' : 'ltr'}>
                 <Box className={styles.illustration}>
                     <img
                         src={unhappyBrowser}
@@ -111,6 +115,11 @@ const BrowserModal = ({intl, ...props}) => {
                             </p>
                         </React.Fragment>
                     )}
+
+                    {/* Add Close Button */}
+                    <button onClick={handleClose} className={styles.closeButton}>
+                        Close
+                    </button>
                 </Box>
             </div>
         </ReactModal>
