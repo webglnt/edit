@@ -1,7 +1,9 @@
 @import "../../css/colors.css";
 @import "../../css/units.css";
 @import "../../css/z-index.css";
-
+@import "../../lib/themes/accent/red.js";
+@import "../../lib/themes/accent/purple.js";
+@import "../../lib/themes/accent/blue.js";
 .menu-bar {
     display: flex;
     flex-direction: row;
