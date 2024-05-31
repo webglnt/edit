@@ -1,5 +1,4 @@
 /* overridden by src/lib/themes/guiHelpers.js */
-$glosstex: var(--glosstex);
 $ui-primary: var(--ui-primary);
 $ui-secondary: var(--ui-secondary);
 $ui-tertiary: var(--ui-tertiary);
