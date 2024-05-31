@@ -15,18 +15,18 @@ import styles from './settings-menu.css';
 
 const options = defineMessages({
     [ACCENT_RED]: {
-        defaultMessage: 'Green',
-        description: 'Name of the green color scheme, used by AcidMod by default.',
+        defaultMessage: 'Red',
+        description: 'Name of the red color scheme, used by TurboWarp by default.',
         id: 'tw.accent.red'
     },
     [ACCENT_PURPLE]: {
-        defaultMessage: 'Amethyst',
-        description: 'Name of the Amethyst color scheme. Matches modern Scratch.',
+        defaultMessage: 'Purple',
+        description: 'Name of the purple color scheme. Matches modern Scratch.',
         id: 'tw.accent.purple'
     },
     [ACCENT_BLUE]: {
-        defaultMessage: 'Aqua',
-        description: 'Name of the aqua color scheme. Matches Scratch before the high contrast update.',
+        defaultMessage: 'Blue',
+        description: 'Name of the blue color scheme. Matches Scratch before the high contrast update.',
         id: 'tw.accent.blue'
     }
 });
@@ -81,7 +81,7 @@ const AccentThemeMenu = ({
             <ColorIcon id={theme.accent} />
             <span className={styles.submenuLabel}>
                 <FormattedMessage
-                    defaultMessage="Themes"
+                    defaultMessage="Accent"
                     description="Label for menu to choose accent color (eg. TurboWarp's red, Scratch's purple)"
                     id="tw.menuBar.accent"
                 />

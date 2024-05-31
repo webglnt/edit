@@ -1000,14 +1000,14 @@ class MenuBar extends React.Component {
                     <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
-                            href="https://discord.com/invite/U5k5SGYsWB"
+                            href="https://scratch.mit.edu/users/GarboMuffin/#comments"
                             rel="noopener noreferrer"
                             target="_blank"
                         >
                             {/* todo: icon */}
                             <Button className={styles.feedbackButton}>
                                 <FormattedMessage
-                                    defaultMessage="AcidMod Discord"
+                                    defaultMessage="{APP_NAME} Feedback"
                                     description="Button to give feedback in the menu bar"
                                     id="tw.feedbackButton"
                                     values={{
