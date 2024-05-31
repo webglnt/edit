@@ -28,7 +28,8 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: $menu-bar-standard-font-size;
     font-weight: bold;
-    background-color: $menu-bar-background;
+    background-image: url(./acidGloss.png);
+    background-size: 100% 100%;
     color: $menu-bar-foreground;
 }
 
