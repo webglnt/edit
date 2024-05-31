@@ -1,12 +1,11 @@
 const guiColors = {
-    'glosstex': 'url(./acidGloss.png)',
-    'motion-primary': '#228B22',
-    'motion-primary-transparent': '#228B22e6',
-    'motion-tertiary': '#228B22',
+    'motion-primary': '#ff4c4c',
+    'motion-primary-transparent': '#ff4c4ce6',
+    'motion-tertiary': '#cc3333',
 
-    'looks-secondary': '#4F7942',
-    'looks-transparent': '#4F794259',
-    'looks-light-transparent': '#4F794226',
+    'looks-secondary': '#ff4c4c',
+    'looks-transparent': '#ff4d4d59',
+    'looks-light-transparent': '#ff4d4d26',
     'looks-secondary-dark': 'hsla(0, 42%, 51%, 1)',
 
     'extensions-primary': 'hsla(10, 85%, 65%, 1)',

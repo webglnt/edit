@@ -1,5 +1,4 @@
 const guiColors = {
-    'glosstex': 'url(./glossAqua.png)',
     'looks-secondary': 'hsla(215, 100%, 65%, 1)',
     'looks-transparent': 'hsla(215, 100%, 65%, 0.35)',
     'looks-light-transparent': 'hsla(215, 100%, 65%, 0.15)',

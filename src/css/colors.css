@@ -1,4 +1,5 @@
 /* overridden by src/lib/themes/guiHelpers.js */
+
 $ui-primary: var(--ui-primary);
 $ui-secondary: var(--ui-secondary);
 $ui-tertiary: var(--ui-tertiary);
