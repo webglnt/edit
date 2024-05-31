@@ -11,6 +11,7 @@ import {
 
 import styles from './browser-modal.css';
 import unhappyBrowser from './unsupported-browser.svg';
+import CloseButton from '../close-button/close-button.jsx'; // Import CloseButton component
 
 const messages = defineMessages({
     label: {
@@ -91,10 +92,8 @@ const BrowserModal = ({ intl, ...props }) => {
                         </React.Fragment>
                     )}
 
-                    {/* Add Close Button */}
-                    <button onClick={handleClose} className={styles.closeButton}>
-                        Dismiss
-                    </button>
+                    {/* Replace existing button with CloseButton component */}
+                    <CloseButton onClick={handleClose} className={styles.closeButton} />
                 </Box>
             </div>
         </ReactModal>
