@@ -357,6 +357,28 @@ export default [
         incompatibleWithScratch: true,
         featured: true
     },
+export const galleryLoading = {
+    name: (
+        <FormattedMessage
+            defaultMessage="TurboWarp Extension Gallery"
+            description="Name of extensions.turbowarp.org in extension library"
+            id="tw.extensionGallery.name"
+        />
+    ),
+    href: 'https://extensions.turbowarp.org/',
+    extensionId: 'gallery',
+    iconURL: galleryIcon,
+    description: (
+        <FormattedMessage
+            // eslint-disable-next-line max-len
+            defaultMessage="Loading extension gallery..."
+            description="Appears while loading extension list from the custom extension gallery"
+            id="tw.extensionGallery.loading"
+        />
+    ),
+    tags: ['tw'],
+    featured: true
+};
     {
         name: (
             <FormattedMessage
