@@ -72,8 +72,6 @@ class Stage extends React.Component {
         this.props.customStageSize.height
     );
 
-            this.props.vm.attachRenderer(this.renderer);
-
             // Only attach a video provider once because it is stateful
             this.props.vm.setVideoProvider(new VideoProvider());
 
