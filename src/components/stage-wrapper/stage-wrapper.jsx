@@ -42,7 +42,7 @@ const StageWrapperComponent = function (props) {
                 />
             </Box>
 <Box className={styles.stageCanvasWrapper}>
-            <canvas width={stageSize.width} height={stageSize.height}></canvas> :
+            <canvas width="480" height="360"></canvas>
 </Box>
             {loading ? (
                 <Loader isFullScreen={isFullScreen} />
