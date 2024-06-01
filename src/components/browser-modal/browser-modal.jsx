@@ -33,15 +33,6 @@ const BrowserModal = ({ intl, ...props }) => {
         contentLabel="Missing WebGL"
         id="browserModal"
         >
-            <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
-                {/* Header section with close button */}
-                <div className={styles.header}>
-                    <CloseButton onClick={handleClose} className={styles.closeButton} />
-                    <h2>
-                        <FormattedMessage {...label} />
-                    </h2>
-                </div>
-
                 <Box className={styles.body}>
                     <Box className={styles.illustration}>
                         <img
