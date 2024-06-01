@@ -360,30 +360,6 @@ export default [
     {
         name: (
             <FormattedMessage
-                defaultMessage="{APP_NAME} Blocks"
-                description="Name of the strange 'TurboWarp Blocks' extension"
-                id="tw.twExtension.name"
-                values={{
-                    APP_NAME
-                }}
-            />
-        ),
-        extensionId: 'tw',
-        iconURL: twIcon,
-        description: (
-            <FormattedMessage
-                defaultMessage="Weird new blocks."
-                description="Description of the strange 'TurboWarp Blocks' extension"
-                id="tw.twExtension.description"
-            />
-        ),
-        incompatibleWithScratch: true,
-        tags: ['tw'],
-        featured: true
-    },
-    {
-        name: (
-            <FormattedMessage
                 defaultMessage="Custom Extension"
                 description="Name of library item to load a custom extension from a remote source"
                 id="tw.customExtension.name"
