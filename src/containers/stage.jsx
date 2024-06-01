@@ -54,22 +54,24 @@ class Stage extends React.Component {
             colorInfo: null,
             question: null
         };
-        if (this.props.vm.renderer) {
-            this.renderer = this.props.vm.renderer;
-            this.canvas = this.renderer.canvas;
-        } else {
-        this.canvas = document.createElement('canvas');
-        this.canvas.width = this.props.customStageSize.width;
-        this.canvas.height = this.props.customStageSize.height;
-        this.context = this.canvas.getContext('2d');
-        if (!this.context) {
-        throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
-}
 
-            this.props.vm.setStageSize(
-                this.props.customStageSize.width,
-                this.props.customStageSize.height
-            );
+    // Create a new canvas element
+    this.canvas = document.createElement('canvas');
+    this.canvas.width = this.props.customStageSize.width;
+    this.canvas.height = this.props.customStageSize.height;
+
+    // Get the 2D context
+    this.context = this.canvas.getContext('2d');
+    if (!this.context) {
+        throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
+    }
+
+    // Initialize the custom stage size
+    this.props.vm.setStageSize(
+        this.props.customStageSize.width,
+        this.props.customStageSize.height
+    );
+
             this.props.vm.attachRenderer(this.renderer);
 
             // Only attach a video provider once because it is stateful
