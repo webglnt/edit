@@ -34,6 +34,10 @@ const BrowserModal = ({ intl, ...props }) => {
         contentLabel="Missing WebGL"
         id="browserModal"
         >
+                        <CloseButton
+                            size={CloseButton.SIZE_LARGE}
+                            onClick={props.onRequestClose}
+                        />
             <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
                 {/* Header section with close button */}
                 <div className={styles.header}>
