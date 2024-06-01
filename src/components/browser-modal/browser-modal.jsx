@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import ReactModal from 'react-modal';
+import Modal from '../../containers/modal.jsx';
 import Box from '../box/box.jsx';
 import { defineMessages, injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import { isRendererSupported, isNewFunctionSupported, findIncompatibleUserscripts } from '../../lib/tw-environment-support-prober.js';
@@ -26,12 +27,11 @@ const BrowserModal = ({ intl, ...props }) => {
     };
 
     return (
-        <ReactModal
-            isOpen={isOpen}
-            className={styles.modalContent}
-            contentLabel={intl.formatMessage({ ...messages.label })}
-            overlayClassName={styles.modalOverlay}
-            onRequestClose={handleClose} // Set onRequestClose to handleClose
+    <Modal
+        className={styles.modalContent}
+        onRequestClose={props.onClose}
+        contentLabel="Missing WebGL"
+        id="browserModal"
         >
             <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
                 {/* Header section with close button */}
@@ -95,7 +95,7 @@ const BrowserModal = ({ intl, ...props }) => {
                     </Box>
                 </Box>
             </Box>
-        </ReactModal>
+        </Modal>
     );
 };
 
