@@ -79,7 +79,6 @@ class Stage extends React.Component {
             // the canvas white instead of solid black–needed because it is not
             // possible to use CSS to style the canvas to have a different
             // default color
-            this.props.vm.renderer.draw();
 
             // tw: handle changes to high quality pen
             this.props.vm.renderer.on('UseHighQualityRenderChanged', this.props.onHighQualityPenChanged);
