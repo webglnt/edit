@@ -39,12 +39,6 @@ const BrowserModal = ({ intl, ...props }) => {
                 </div>
 
                 <Box className={styles.body}>
-                    <Box className={styles.illustration}>
-                        <img
-                            src={unhappyBrowser}
-                            draggable={false}
-                        />
-                    </Box>
                         {/* Main content goes here */}
                         {/* eslint-disable max-len */}
                         {isNewFunctionSupported() ? null : (
