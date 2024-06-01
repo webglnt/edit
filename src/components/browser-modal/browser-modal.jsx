@@ -29,7 +29,7 @@ const BrowserModal = ({ intl, ...props }) => {
     return (
     <Modal
         className={styles.modalContent}
-        onRequestClose={handleClose}
+        onRequestClose={props.onClose}
         contentLabel="Missing WebGL"
         id="browserModal"
         >
