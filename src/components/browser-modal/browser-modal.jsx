@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import Modal from '../../containers/modal.jsx';
+import ReactModal from 'react-modal';
 import Box from '../box/box.jsx';
 import { defineMessages, injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import { isRendererSupported, isNewFunctionSupported, findIncompatibleUserscripts } from '../../lib/tw-environment-support-prober.js';
