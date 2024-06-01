@@ -58,14 +58,14 @@ class Stage extends React.Component {
             this.renderer = this.props.vm.renderer;
             this.canvas = this.renderer.canvas;
         } else {
-            this.canvas = document.createElement('canvas');
-            this.renderer = new Renderer(
-                this.canvas,
-                -this.props.customStageSize.width / 2,
-                this.props.customStageSize.width / 2,
-                -this.props.customStageSize.height / 2,
-                this.props.customStageSize.height / 2
-            );
+        this.canvas = document.createElement('canvas');
+        this.canvas.width = this.props.customStageSize.width;
+        this.canvas.height = this.props.customStageSize.height;
+        this.context = this.canvas.getContext('2d');
+        if (!this.context) {
+        throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
+}
+
             this.props.vm.setStageSize(
                 this.props.customStageSize.width,
                 this.props.customStageSize.height
