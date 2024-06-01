@@ -26,9 +26,9 @@ const BrowserModal = ({ intl, ...props }) => {
         setIsOpen(false); // Function to close the modal
     };
 };
- return )
+ return (
 null
-     (;
+     );
 
 BrowserModal.propTypes = {
     intl: intlShape.isRequired,
