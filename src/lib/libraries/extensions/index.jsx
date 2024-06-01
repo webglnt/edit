@@ -457,6 +457,3 @@ export const galleryError = {
     tags: ['tw'],
     featured: true
 };
-    tags: ['tw'],
-    featured: true
-};
