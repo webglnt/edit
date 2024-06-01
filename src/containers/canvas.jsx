@@ -11,13 +11,23 @@ class Stage extends React.Component {
         this.canvas = document.createElement('canvas');
     }
     
-    componentDidMount() {
-        // Append the canvas element to the component's container
-        this.stageCanvasWrapper.appendChild(this.canvas);
-        
-        // You can continue with your canvas setup and initialization here
-        // For example, setting canvas size, obtaining context, etc.
+componentDidMount() {
+    // Append the canvas element to the component's container
+    this.stageCanvasWrapper.appendChild(this.canvas);
+    
+    // Set canvas size
+    this.canvas.width = 480;
+    this.canvas.height = 360;
+
+    // Obtain 2D context
+    const ctx = this.canvas.getContext('2d');
+    if (!ctx) {
+        throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
     }
+
+    // You can continue with additional canvas setup and initialization here
+    // For example, setting up event listeners, drawing initial content, etc.
+}
 
     render() {
         return (
