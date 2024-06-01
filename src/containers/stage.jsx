@@ -59,10 +59,19 @@ class Stage extends React.Component {
             this.canvas = this.renderer.canvas;
         } else {
             this.canvas = document.createElement('canvas');
+            this.renderer = new Renderer(
+                this.canvas,
+                -this.props.customStageSize.width / 2,
+                this.props.customStageSize.width / 2,
+                -this.props.customStageSize.height / 2,
+                this.props.customStageSize.height / 2
+            );
             this.props.vm.setStageSize(
                 this.props.customStageSize.width,
                 this.props.customStageSize.height
             );
+            this.props.vm.attachRenderer(this.renderer);
+
             // Only attach a video provider once because it is stateful
             this.props.vm.setVideoProvider(new VideoProvider());
 
