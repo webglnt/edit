@@ -42,10 +42,11 @@ const StageWrapperComponent = function (props) {
                 />
             </Box>
 <Box className={styles.stageCanvasWrapper}>
-    <Stage
-        stageSize={stageSize}
-        vm={vm}
-    />
+    {
+        isRendererSupported ?
+            <canvas width={stageSize.width} height={stageSize.height}></canvas> :
+            <canvas width={stageSize.width} height={stageSize.height}></canvas>
+    }
 </Box>
             {loading ? (
                 <Loader isFullScreen={isFullScreen} />
