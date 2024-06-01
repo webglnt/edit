@@ -144,7 +144,7 @@ module.exports = [
     // to run editor examples
     defaultsDeep({}, base, {
         entry: {
-            'edit': './src/playground/edit.jsx',
+            'edit': './src/playground/editor.jsx',
             'player': './src/playground/player.jsx',
             'fullscreen': './src/playground/fullscreen.jsx',
             'embed': './src/playground/embed.jsx',
