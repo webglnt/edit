@@ -33,8 +33,22 @@ const BrowserModal = ({ intl, ...props }) => {
         contentLabel="Missing WebGL"
         id="browserModal"
         >
-                        <Box className={styles.body}>
-                    <Box className={styles.content}>
+            <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
+                {/* Header section with close button */}
+                <div className={styles.header}>
+                    <CloseButton onClick={handleClose} className={styles.closeButton} />
+                    <h2>
+                        <FormattedMessage {...label} />
+                    </h2>
+                </div>
+
+                <Box className={styles.body}>
+                    <Box className={styles.illustration}>
+                        <img
+                            src={unhappyBrowser}
+                            draggable={false}
+                        />
+                    </Box>
                         {/* Main content goes here */}
                         {/* eslint-disable max-len */}
                         {isNewFunctionSupported() ? null : (
