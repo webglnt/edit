@@ -146,6 +146,7 @@ module.exports = [
     defaultsDeep({}, base, {
         entry: {
             'edit': './src/playground/editor.jsx',
+            'editor': './src/playground/editor.jsx',
             'player': './src/playground/player.jsx',
             'fullscreen': './src/playground/fullscreen.jsx',
             'embed': './src/playground/embed.jsx',
@@ -188,7 +189,15 @@ module.exports = [
             new HtmlWebpackPlugin({
                 chunks: ['edit'],
                 template: 'src/playground/index.ejs',
-                filename: 'edit.html',
+                filename: 'editor.html',
+                title: `${APP_NAME} Edit`,
+                isEditor: true,
+                ...htmlWebpackPluginCommon
+            }),
+                        new HtmlWebpackPlugin({
+                chunks: ['editor'],
+                template: 'src/playground/index.ejs',
+                filename: 'editor.html',
                 title: `${APP_NAME} Edit`,
                 isEditor: true,
                 ...htmlWebpackPluginCommon
