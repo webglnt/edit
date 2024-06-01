@@ -28,12 +28,12 @@ const BrowserModal = ({ intl, ...props }) => {
 
     return (
     <Modal
+        isOpen
         className={styles.modalContent}
         onRequestClose={props.onClose}
         contentLabel="Missing WebGL"
         id="browserModal"
         >
-                    <CloseButton size={CloseButton.SIZE_LARGE} onClick={handleClose} />
             <Box dir={props.isRtl ? 'rtl' : 'ltr'}>
                 {/* Header section with close button */}
                 <div className={styles.header}>
