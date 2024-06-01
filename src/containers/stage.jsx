@@ -55,14 +55,14 @@ class Stage extends React.Component {
             question: null
         };
 
-    // Create a new canvas element
-    this.canvas = document.createElement('canvas');
-    this.canvas.width = this.props.customStageSize.width;
-    this.canvas.height = this.props.customStageSize.height;
-
-    // Get the 2D context
-    this.context = this.canvas.getContext('2d');
-    if (!this.context) {
+        if (false) {
+        console.log("How in the fu-");
+        } else {
+        this.canvas = document.createElement('canvas');
+        this.canvas.width = this.props.customStageSize.width;
+        this.canvas.height = this.props.customStageSize.height;
+        this.context = this.canvas.getContext('2d');
+        if (!this.context) {
         throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
     }
 
