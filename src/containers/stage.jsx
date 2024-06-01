@@ -54,23 +54,23 @@ class Stage extends React.Component {
             colorInfo: null,
             question: null
         };
-
-        if (false) {
-        console.log("How in the fu-");
+        if (this.props.vm.renderer) {
+            this.renderer = this.props.vm.renderer;
+            this.canvas = this.renderer.canvas;
         } else {
-        this.canvas = document.createElement('canvas');
-        this.canvas.width = this.props.customStageSize.width;
-        this.canvas.height = this.props.customStageSize.height;
-        this.context = this.canvas.getContext('2d');
-        if (!this.context) {
-        throw new Error('Could not get 2D canvas context: this browser or environment may not support the 2D canvas API.');
-    }
-
-    // Initialize the custom stage size
-    this.props.vm.setStageSize(
-        this.props.customStageSize.width,
-        this.props.customStageSize.height
-    );
+            this.canvas = document.createElement('canvas');
+            this.renderer = new Renderer(
+                this.canvas,
+                -this.props.customStageSize.width / 2,
+                this.props.customStageSize.width / 2,
+                -this.props.customStageSize.height / 2,
+                this.props.customStageSize.height / 2
+            );
+            this.props.vm.setStageSize(
+                this.props.customStageSize.width,
+                this.props.customStageSize.height
+            );
+            this.props.vm.attachRenderer(this.renderer);
 
             // Only attach a video provider once because it is stateful
             this.props.vm.setVideoProvider(new VideoProvider());
@@ -79,6 +79,7 @@ class Stage extends React.Component {
             // the canvas white instead of solid black–needed because it is not
             // possible to use CSS to style the canvas to have a different
             // default color
+            this.props.vm.renderer.draw();
 
             // tw: handle changes to high quality pen
             this.props.vm.renderer.on('UseHighQualityRenderChanged', this.props.onHighQualityPenChanged);
