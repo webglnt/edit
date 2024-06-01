@@ -25,9 +25,6 @@ const BrowserModal = ({ intl, ...props }) => {
     const handleClose = () => {
         setIsOpen(false); // Function to close the modal
     };
-
-    return (
-    );
 };
 
 BrowserModal.propTypes = {
