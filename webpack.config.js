@@ -39,7 +39,7 @@ const base = {
             rewrites: [
                 {from: /^\/\d+\/?$/, to: '/index.html'},
                 {from: /^\/\d+\/fullscreen\/?$/, to: '/fullscreen.html'},
-                {from: /^\/\d+\/edit\/?$/, to: '/editor.html'},
+                {from: /^\/\d+\/edit\/?$/, to: '/edit.html'},
                 {from: /^\/\d+\/embed\/?$/, to: '/embed.html'},
                 {from: /^\/addons\/?$/, to: '/addons.html'}
             ]
@@ -185,10 +185,10 @@ module.exports = [
                 'process.env.ROUTING_STYLE': JSON.stringify(process.env.ROUTING_STYLE || 'filehash')
             }),
             new HtmlWebpackPlugin({
-                chunks: ['editor'],
+                chunks: ['edit'],
                 template: 'src/playground/index.ejs',
-                filename: 'editor.html',
-                title: `${APP_NAME} - Run Scratch projects faster`,
+                filename: 'edit.html',
+                title: `${APP_NAME} Edit`,
                 isEditor: true,
                 ...htmlWebpackPluginCommon
             }),
