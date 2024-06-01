@@ -88,7 +88,6 @@ const BrowserModal = ({ intl, ...props }) => {
                         )}
                     </Box>
                 </Box>
-            </Box>
         </Modal>
     );
 };
