@@ -189,7 +189,7 @@ module.exports = [
             new HtmlWebpackPlugin({
                 chunks: ['edit'],
                 template: 'src/playground/index.ejs',
-                filename: 'editor.html',
+                filename: 'edit.html',
                 title: `${APP_NAME} Edit`,
                 isEditor: true,
                 ...htmlWebpackPluginCommon
