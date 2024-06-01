@@ -5,7 +5,7 @@ import Modal from '../../containers/modal.jsx';
 import Box from '../box/box.jsx';
 import { defineMessages, injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import { isRendererSupported, isNewFunctionSupported, findIncompatibleUserscripts } from '../../lib/tw-environment-support-prober.js';
-import styles from './browser-modal.css';
+import styles from '../tw-settings-modal/settings-modal.css';
 import unhappyBrowser from './unsupported-browser.svg';
 import CloseButton from '../close-button/close-button.jsx'; // Import CloseButton component
 
