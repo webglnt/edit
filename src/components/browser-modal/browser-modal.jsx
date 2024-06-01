@@ -33,6 +33,8 @@ const BrowserModal = ({ intl, ...props }) => {
         contentLabel="Missing WebGL"
         id="browserModal"
         >
+                        <Box className={styles.body}>
+                    <Box className={styles.content}>
                         {/* Main content goes here */}
                         {/* eslint-disable max-len */}
                         {isNewFunctionSupported() ? null : (
