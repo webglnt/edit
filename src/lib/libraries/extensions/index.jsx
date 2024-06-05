@@ -408,6 +408,5 @@ export const galleryError = {
             id="tw.extensionGallery.error"
         />
     ),
-    tags: ['tw'],
     featured: true
 };
