@@ -381,40 +381,13 @@ export default [
     
 ];
 export const galleryLoading = {
-    name: (
-    null
-    ),
-    href: null,
-    extensionId: null,
-    description: (
-    null
-    ),
-    tags: ['scratch'],
-    featured: false
+null
 };
 
 export const galleryMore = {
-    name: (
-    null
-    ),
-    href: null,
-    extensionId: null,
-    description: (
-    null
-    ),
-    tags: ['scratch'],
-    featured: false
+null
 };
 
 export const galleryError = {
-    name: (
-    null
-    ),
-    href: null,
-    extensionId: null,
-    description: (
-    null
-    ),
-    tags: ['scratch'],
-    featured: false
+null
 };
