@@ -381,13 +381,10 @@ export default [
     
 ];
 export const galleryLoading = {
-null
 };
 
 export const galleryMore = {
-null
 };
 
 export const galleryError = {
-null
 };
