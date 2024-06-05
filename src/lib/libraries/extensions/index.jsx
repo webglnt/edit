@@ -408,5 +408,5 @@ export const galleryError = {
             id="tw.extensionGallery.error"
         />
     ),
-    featured: true
+    featured: false
 };
