@@ -391,7 +391,7 @@ export const galleryLoading = {
             }}
         />
     ),
-    href: 'https://webglnt.github.io/ext',
+    href: '',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
@@ -417,7 +417,7 @@ export const galleryMore = {
             }}
         />
     ),
-    href: 'https://webglnt.github.io/ext',
+    href: '',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
@@ -443,7 +443,7 @@ export const galleryError = {
             }}
         />
     ),
-    href: 'https://webglnt.github.io/ext',
+    href: '',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
