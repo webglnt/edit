@@ -397,8 +397,9 @@ export const galleryError = {
             }}
         />
     ),
-    href: 'https://extensions.turbowarp.org/',
+    href: '#',
     extensionId: 'gallery',
+    iconURL: customExtensionIcon,
     description: (
         <FormattedMessage
             // eslint-disable-next-line max-len
