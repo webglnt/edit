@@ -387,4 +387,27 @@ export const galleryMore = {
 };
 
 export const galleryError = {
+    name: (
+        <FormattedMessage
+            defaultMessage="Warning!"
+            description="Name of extensions.turbowarp.org in extension library"
+            id="tw.extensionGallery.name"
+            values={{
+                APP_NAME
+            }}
+        />
+    ),
+    href: 'https://extensions.turbowarp.org/',
+    extensionId: 'gallery',
+    iconURL: galleryIcon,
+    description: (
+        <FormattedMessage
+            // eslint-disable-next-line max-len
+            defaultMessage="Many custom extensions won't work as expected in WebGLn't"
+            description="Appears when an error occurred loading extension list from the custom extension gallery"
+            id="tw.extensionGallery.error"
+        />
+    ),
+    tags: ['tw'],
+    featured: true
 };
