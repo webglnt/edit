@@ -400,7 +400,7 @@ export const galleryError = {
     ),
     href: '#',
     extensionId: 'gallery',
-    iconURL: warningIcon,
+    iconURL: galleryIcon,
     description: (
         <FormattedMessage
             // eslint-disable-next-line max-len
