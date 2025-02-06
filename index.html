@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGLn’t Redirect</title>
+    <script>
+        window.onload = function() {
+            const defaultBase = 'https://turbowarp.org/editor?project_url=https://kylekart.github.io/ScratchExtensions/projects/webglnt.sb3';
+            
+            const nitroboltBase = 'https://forkbolt.miyo.lol/editor?project_url=https://kylekart.github.io/ScratchExtensions/projects/webglnt.sb3#0';
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const baseUrl = urlParams.get('base');
+
+            let redirectUrl;
+            if (baseUrl === 'nitrobolt') {
+                redirectUrl = nitroboltBase;
+            } else if (baseUrl === 'turbowarp' || !baseUrl) {
+                redirectUrl = defaultBase;
+            } else {
+                redirectUrl = defaultBase;
+            }
+
+            // Redirect to the selected URL
+            window.location.href = redirectUrl;
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the appropriate project...</p>
+</body>
+</html>
